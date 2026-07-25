@@ -6,21 +6,81 @@ st.set_page_config(
     page_title="徳島国際工科大学（TITC）", page_icon="🏫", layout="wide"
 )
 
-# ヘッダーエリア
-st.title("徳島国際工科大学")
-st.caption("Tokushima Institute of Technology and Commerce (TITC)")
-st.markdown("---")
+# ---------------------------------------------------------
+# カスタムCSS（濃紺/ネイビーテーマの設定）
+# ---------------------------------------------------------
+st.markdown(
+    """
+    <style>
+    /* メインヘッダー・アクセントカラー */
+    .navy-header {
+        background-color: #0d233a;
+        color: #ffffff;
+        padding: 20px 25px;
+        border-radius: 8px;
+        margin-bottom: 25px;
+    }
+    .navy-header h1 {
+        color: #ffffff !important;
+        margin: 0;
+        font-size: 2.2rem;
+        font-weight: 700;
+    }
+    .navy-header p {
+        color: #b0c4de !important;
+        margin: 5px 0 0 0;
+        font-size: 0.95rem;
+    }
+    .domain-badge {
+        display: inline-block;
+        background-color: #1e3a5f;
+        color: #87cefa;
+        padding: 3px 10px;
+        border-radius: 4px;
+        font-family: monospace;
+        font-size: 0.85rem;
+        margin-top: 8px;
+    }
+    /* サブタイトルの下線風アクセント */
+    h2, h3 {
+        color: #0d233a !important;
+        border-bottom: 2px solid #0d233a;
+        padding-bottom: 5px;
+    }
+    /* サイドバーのカスタマイズ */
+    [data-testid="stSidebar"] {
+        background-color: #f4f7f9;
+        border-right: 1px solid #d0d7de;
+    }
+    </style>
+""",
+    unsafe_allow_html=True,
+)
+
+# ---------------------------------------------------------
+# ヘッダーエリア（濃紺デザイン）
+# ---------------------------------------------------------
+st.markdown(
+    """
+    <div class="navy-header">
+        <h1>徳島国際工科大学</h1>
+        <p>Tokushima Institute of Technology and Commerce (TITC)</p>
+        <div class="domain-badge">🌐 https://kokushin-u.jp</div>
+    </div>
+""",
+    unsafe_allow_html=True,
+)
 
 # サイドバー（ナビゲーション）
-st.sidebar.image(
-    "https://via.placeholder.com/150x150.png?text=TITC+Logo",
-    caption="校章：歯車と藍の葉",
-)
-st.sidebar.header("大学案内メニュー")
+st.sidebar.header("🎓 TITC 大学ポータル")
 page = st.sidebar.radio(
     "メニューを選択",
     ["トップページ", "大学概要・沿革", "学部・学科紹介", "キャンパスライフ・学食"],
 )
+
+st.sidebar.markdown("---")
+st.sidebar.caption("学校法人 徳島工学園")
+st.sidebar.caption("© Tokushima Institute of Technology and Commerce.")
 
 # --- ページ1：トップページ ---
 if page == "トップページ":
@@ -36,7 +96,7 @@ if page == "トップページ":
         st.write("・**2026/06/20**: 2027年度 総合型選抜・学校推薦型選抜の要項を公開しました")
 
     with col2:
-        st.write("### 🗓 重要なお知らせ（学生向け）")
+        st.write("### 🗓 重要なお知らせ（学生・教職員向け）")
         with st.expander("【蔵本キャンパス】3年生向け シャトルバス運用変更について"):
             st.write("蔵本〜常三島ベイキャンパス間の平日運行便数が一部変更となります。時間割を確認してください。")
         with st.expander("留学生チューター制度 募集開始"):
