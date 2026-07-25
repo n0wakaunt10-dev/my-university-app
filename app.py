@@ -109,6 +109,8 @@ page = st.sidebar.radio(
 st.sidebar.markdown("---")
 st.sidebar.caption("学校法人 徳島工学園")
 st.sidebar.caption("© Tokushima Institute of Technology and Commerce.")
+# ★ 注記を追加！
+st.sidebar.caption(" Questa è un'università immaginaria.")
 
 # ---------------------------------------------------------
 # ページ1：トップページ
@@ -301,7 +303,7 @@ elif page == "就職・進路実績":
     st.write("・**4年次:** 個別面接指導、学内合同企業説明会")
 
 # ---------------------------------------------------------
-# ページ6：入試情報・過去問（新規追加）
+# ページ6：入試情報・過去問
 # ---------------------------------------------------------
 elif page == "入試情報・過去問":
     st.header("入試情報・過去問アーカイブ")
