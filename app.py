@@ -93,7 +93,7 @@ if page == "トップページ":
 
     # ★↓この下のダブルクォーテーションの中に、取得した画像URLを貼り付けてください★
     st.image(
-        "<a href="https://imgbb.com/"><img src="https://i.ibb.co/cjGkrGG/IMG-0132.jpg" alt="IMG-0132" border="0" /></a>",
+        "<a href="https://imgbb.com/"><img /></a>",
         caption="蔵本キャンパス 全景（徳島市）",
         use_container_width=True,
     )
