@@ -34,16 +34,6 @@ st.markdown(
         font-size: 0.9rem;
         font-family: 'Times New Roman', serif;
     }
-    .domain-badge {
-        display: inline-block;
-        background-color: #162d47;
-        color: #87cefa;
-        padding: 2px 8px;
-        border-radius: 3px;
-        font-family: monospace;
-        font-size: 0.8rem;
-        margin-top: 10px;
-    }
     /* 見出し装飾 */
     h2 {
         color: #0b1f33 !important;
@@ -76,7 +66,6 @@ st.markdown(
     <div class="navy-header">
         <h1>徳島国際工科大学</h1>
         <p>Tokushima Institute of Technology and Commerce (TITC)</p>
-        <div class="domain-badge">https://kokushin-u.jp</div>
     </div>
 """,
     unsafe_allow_html=True,
@@ -109,8 +98,7 @@ page = st.sidebar.radio(
 st.sidebar.markdown("---")
 st.sidebar.caption("学校法人 徳島工学園")
 st.sidebar.caption("© Tokushima Institute of Technology and Commerce.")
-# ★ 注記を追加！
-st.sidebar.caption(" Questa è un'università immaginaria.")
+st.sidebar.caption("Questa è un'università immaginaria.")
 
 # ---------------------------------------------------------
 # ページ1：トップページ
